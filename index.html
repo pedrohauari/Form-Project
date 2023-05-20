@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Book a flight to your dream destination! </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital@1&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <header>
+        <h1 class="heading"> Welcome to the Best Site for Booking flights on the internet!</h1>
+    </header>
+    <nav class="navbar"> </nav>
+    <main class="main"> 
+        <h1 class="message"> Make Your Dreams Come True! Book your Flight Now!</h1>
+        <p> <em> Sign up now! </em></p>
+        <div class="account"> 
+            <h2> Create your Account </h2>
+            <form class="form" action="" method="GET">
+            <div class="name"> 
+                <label for="firstName">*First name</label>
+                <input type="text" id="firstName" minlength="4" maxlength="30" placeholder="minimum of 4 letters" required>
+
+                <label for="lastName">*Last name </label>
+                <input type="text" id="lastName" minlength="2" maxlength="30" placeholder="minimum of 2 letters" required> 
+            </div>
+            <div class="email"> 
+                <label for="mail">*Email</label>
+                <input type="email" id="mail" required> 
+
+                <label for="phoneNumber" > *Phone number </label>
+                <input type="tel" id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="format: 123-456-7890" required>
+            </div>
+            <div class="password"> 
+                <label for="password" class="error">*Password</label>
+                <input type="password" id="password" minlength="6" maxlength="40" placeholder="minimum of 6 letters" required>  
+
+                <label for="confirm">*Confirm Password</label>
+                <input type="password" id="confirm-password" minlength="6" maxlength="40" required>
+            </div>
+            <div id="check"></div>
+            <div> 
+                <button class="submit" type="submit"> Create Account </button>
+            </div>
+            <p> Already have an account? <a href="#"> Log in</a></p>
+        </div>
+        </form>
+    </main>
+    <aside class="aside"> 
+        <img src="https://images.unsplash.com/photo-1542438408-abb260104ef3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80" alt="">
+        <div class="transparent"> </div>
+        <p class="credit"> © Photo by <u> Maxime Bui </u> on <u> Unplash </u> </p>
+    </aside>
+    <footer class="footer"></footer>
+
+    <script>
+        const password = document.querySelector("#password");
+        const confirm = document.querySelector("#confirm-password");
+        const check = document.querySelector("#check");
+    
+        confirm.addEventListener("input", passwordMatch );
+        password.addEventListener("input", passwordMatch );
+    
+        function passwordMatch() {
+            
+            if (password.value === "" || confirm_password.value === "" ) {
+                check.textContent = "";
+               confirm.style.outline = "1px solid #bbbbbb";
+            }
+           else if (confirm_password.value != password.value) {
+               check.textContent = "passwords don't match";
+               check.style.color = "red";
+               confirm.style.outline = "1px solid red";
+           } else if (confirm_password.value === password.value) {
+            check.textContent = "OK";
+            check.style.color = "green";
+            confirm.style.outline = "1px solid green";
+        }
+    }
+    </script>
+
+
+
+</body>
+</html>

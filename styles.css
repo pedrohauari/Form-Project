@@ -1,0 +1,59 @@
+* { 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Rokkitt', serif;
+    margin: 0.1rem;
+    padding: 0.2rem;
+}
+:root { 
+    --text-primary: #fff;
+    min-height:100vh;
+}
+.body { 
+    background: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Rokkitt', serif;
+}
+.heading { 
+    color:var(--text-primary);
+}
+.message { 
+    color:var(--text-primary);
+}
+div > h2 { 
+    color: var(--text-primary);
+}
+.name { 
+    color:var(--text-primary);
+}
+.email { 
+    color:var(--text-primary)
+}
+.password { 
+    color: var(--text-primary);
+}
+.submit { 
+    color:var(--text-primary);
+    background-color: #596D48
+}
+p, a { 
+    color:var(--text-primary);
+}
+.credit { 
+    color: var(--text-primary);
+}
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] { 
+    border: 3px solid #E5E7EB;
+
+}
+input:focus { 
+    border: 3px solid rgba(54, 54, 212, 0.719);
+}
+img { 
+    width: 40rem;
+    height: 50rem;
+}
